@@ -1,0 +1,81 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+// PaymentGateway interface
+interface PaymentGateway {
+    void processPayment(double amount);
+}
+
+// StripePaymentGateway class
+class StripePaymentGateway implements PaymentGateway {
+    protected String api_credential = "***";
+    public void processPayment(double amount) {
+        // Logic for processing payment with Stripe
+        System.out.print("This is StripePaymentGateway and the amount is "+amount);
+    }
+}
+
+// PayPalPaymentGateway class
+class PayPalPaymentGateway implements PaymentGateway {
+    protected String api_credential = "***";
+
+    public void processPayment(double amount) {
+        // Logic for processing payment with PayPal
+        System.out.print("This is PayPalPaymentGateway and the amount is "+amount);
+    }
+}
+
+// AuthorizeNetPaymentGateway class
+class AuthorizeNetPaymentGateway implements PaymentGateway {
+    protected String api_credential = "***";
+    public void processPayment(double amount) {
+        // Logic for processing payment with Authorize.Net
+        System.out.print("This is AuthorizeNetPaymentGateway and the amount is "+amount);
+    }
+}
+
+// PaymentProcessor class
+class PaymentProcessor {
+    private PaymentGateway gateway;
+
+    public PaymentProcessor(PaymentGateway gateway) {
+        this.gateway = gateway;
+    }
+
+    public void processPayment(double amount) {
+        gateway.processPayment(amount);
+    }
+}
+
+// PaymentController class
+class PaymentController
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		double amount = 100; // The amount to be charged
+
+        // Determine which payment gateway to use based on the environment variable
+        String gatewayName = "paypal";
+
+        PaymentGateway gateway;
+        switch (gatewayName) {
+            case "paypal":
+                gateway = new PayPalPaymentGateway();
+                break;
+            case "authorizenet":
+                gateway = new AuthorizeNetPaymentGateway();
+                break;
+            default:
+                gateway = new StripePaymentGateway();
+                break;
+        }
+
+        PaymentProcessor processor = new PaymentProcessor(gateway);
+        processor.processPayment(amount);
+	}
+}
