@@ -1,0 +1,178 @@
+/* Existing CSS styles for other elements */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; /* Add a z-index to ensure the header is on top of other elements */
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Rest of the CSS styles for other elements remain unchanged */
+  
+  .main-content {
+    
+    display: flex;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .left-sidebar,
+  .right-sidebar {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .left-sidebar {
+    margin-right: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .right-sidebar {
+    margin-left: 20px;
+    background-color: #f0f0f0;
+  }
+
+  .left-sidebar,.right-sidebar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main {
+    flex: 4;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 70px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact-info,
+  .hot-links {
+    flex: 1;
+  }
+  
+  .contact-info h3,
+  .hot-links h3 {
+    margin-bottom: 10px;
+    
+  }
+  
+  .hot-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hot-links li {
+    margin-bottom: 5px;
+  }
+  
+  .hot-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Existing CSS styles for other elements */
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .card-container{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+
+  .card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    overflow: hidden;
+    height: 400px;
+  }
+  
+  .card-image {
+    text-align: center;
+  }
+  
+  .card-image img {
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    margin: 5px 0;
+  }
+  .own-mirror{
+    height: 80%;
+    width: 100%;
+  }
+  
+  

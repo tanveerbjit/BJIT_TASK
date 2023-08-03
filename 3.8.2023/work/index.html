@@ -1,26 +1,195 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="Tanveer" content="MERN Training">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MERN</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Layout</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
-    <h1>Header 1</h1> 
-    <h2>Header 2</h2>
-    <h3>Header 3</h3>
-    <p>This is a paragraph about my website</p>
-    <img src="img.jpg" alt="panda image" width="400" height="400"/><br/>
-    <iframe src="http://127.0.0.1:5500/index.html" title="Panda"></iframe><br/>
-    <a href="https://www.google.com/" target="_blank">Google</a><br/>
+  <header>
+    <div class="logo">Your Logo</div>
+    <nav>
+      <ul>
+        <li><a href="#employee">Employee</a></li>
+        <li><a href="#customer">Customer</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#mirror">Mirror</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content" id="employee">
+    <aside class="left-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+    <main>
+      <!-- Main content goes here -->
+      <h2 style="text-align: center;">Employee List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Designation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>30</td>
+            <td>SE</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>25</td>
+            <td>SQL</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>25</td>
+            <td>SE</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>25</td>
+            <td>SQA</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>25</td>
+            <td>SE</td>
+          </tr>
+         
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </main>
+    <aside class="right-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+  </div>
+
+  <div class="main-content" id="customer">
+    <aside class="left-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+    <main>
+      <!-- Main content goes here -->
+      <h2 style="text-align: center;">Customer profile</h2>
+      <div class="card-container">
+        <div class="card">
+            <div class="card-image">
+              <img src="person.png" alt="Employee Photo" height="200" width="150">
+            </div>
+            <div class="card-content">
+              <h2>John Doe</h2>
+              <p>Position: Web Developer</p>
+              <p>Email: john.doe@example.com</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+                <img src="person.png" alt="Employee Photo" height="200" width="150">
+            </div>
+            <div class="card-content">
+              <h2>John Doe</h2>
+              <p>Position: Web Developer</p>
+              <p>Email: john.doe@example.com</p>
+            </div>
+          </div>
+      </div>
+      
+    </main>
+    <aside class="right-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+  </div>
+
+  <div class="main-content" id="service">
+    <aside class="left-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+    <main>
+      <!-- Main content goes here -->
+      <h2 style="text-align: center;">Service Content</h2>
+      <div class="container">
+        <ul class="service-list">
+          <li>
+            <h2>Web Development</h2>
+            <p>Custom web application development using modern technologies.</p>
+          </li>
+          <li>
+            <h2>Mobile App Development</h2>
+            <p>Build native or cross-platform mobile apps for iOS and Android.</p>
+          </li>
+          <li>
+            <h2>E-commerce Solutions</h2>
+            <p>Create feature-rich and scalable e-commerce platforms.</p>
+          </li>
+          <li>
+            <h2>UI/UX Design</h2>
+            <p>Design intuitive and user-friendly interfaces for your applications.</p>
+          </li>
+          <li>
+            <h2>Cloud Services</h2>
+            <p>Optimize and deploy your applications on cloud platforms.</p>
+          </li>
+        </ul>
+      </div>
+      
+    </main>
+    <aside class="right-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+  </div>
+
+
+  <div class="main-content" id="mirror">
+    <aside class="left-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+    <main>
+      <!-- Main content goes here -->
+      <h2 style="text-align: center;">Mirror Content</h2>
+      <iframe src="http://127.0.0.1:5500/" class="own-mirror">
+         
+      </iframe>
+    </main>
+    <aside class="right-sidebar">
+      <!-- Advertisement or other content here -->
+      <p>Advertisement</p>
+    </aside>
+  </div>
+
+  
+
+  
+
+
+
+  <footer>
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p>Your Address</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+    <div class="hot-links">
+      <h3>Hot Links</h3>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
-
-
-
 </html>
